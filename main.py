@@ -16,6 +16,9 @@ import os
 from core.world_manager import WorldManager
 from config import PATHS
 
+# Plataforma
+from utils.platform import detect_platform
+
 
 class MainMenuScreen(Screen):
     """Tela do menu principal"""
@@ -195,9 +198,28 @@ class BardGameApp(App):
         self.current_world: WorldManager = None
     
     def build(self):
-        # Configurar janela
-        Window.size = (800, 600)
+        # Detectar plataforma e configurar janela de acordo
+        plat_info = detect_platform()
+        is_mobile = plat_info.get('is_mobile', False)
+
         Window.clearcolor = (0.1, 0.1, 0.15, 1)
+
+        if is_mobile:
+            # Em mobile abrimos em fullscreen
+            try:
+                Window.fullscreen = True
+            except Exception:
+                # fallback para plataforma onde fullscreen não existe
+                pass
+        else:
+            # Desktop: janela padrão resizável
+            Window.size = (1024, 768)
+            # Kivy permite redimensionamento por padrão em desktop
+            try:
+                Window.minimum_width = 600
+                Window.minimum_height = 400
+            except Exception:
+                pass
         
         # Criar gerenciador de telas
         sm = ScreenManager()
@@ -208,6 +230,21 @@ class BardGameApp(App):
         sm.add_widget(WorldEditorScreen(name='world_editor'))
         
         return sm
+
+    def on_start(self):
+        # Mostrar popup informando a identificação do usuário/plataforma
+        try:
+            from kivy.uix.popup import Popup
+            from kivy.uix.label import Label
+            info = detect_platform()
+            user = info.get('user', 'desconhecido')
+            platform_name = info.get('platform', 'unknown')
+            is_mobile = info.get('is_mobile', False)
+            text = f"Executando como: {user}\nPlataforma: {platform_name} ({'mobile' if is_mobile else 'desktop'})"
+            popup = Popup(title='Identificação', content=Label(text=text), size_hint=(0.6, 0.3))
+            popup.open()
+        except Exception:
+            pass
 
 
 if __name__ == '__main__':

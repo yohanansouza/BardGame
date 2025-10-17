@@ -346,3 +346,6 @@ yarn.lock
 
 # Python wheels
 *.whl
+
+#Manual
+worlds/
