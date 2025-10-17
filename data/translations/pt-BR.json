@@ -1,0 +1,191 @@
+{
+  "app_name": "BardGame - Sistema de RPG Customizável",
+  "menu": {
+    "new_world": "Novo Mundo",
+    "load_world": "Carregar Mundo",
+    "save_world": "Salvar Mundo",
+    "settings": "Configurações",
+    "exit": "Sair"
+  },
+  "world_creation": {
+    "title": "Criar Novo Mundo",
+    "world_name": "Nome do Mundo",
+    "gm_name": "Nome do Mestre",
+    "description": "Descrição",
+    "create": "Criar",
+    "cancel": "Cancelar"
+  },
+  "tabs": {
+    "attributes": "Atributos",
+    "levels": "Níveis",
+    "races": "Raças",
+    "proficiency": "Proficiências",
+    "magic": "Magia",
+    "talents": "Talentos",
+    "currency": "Moedas",
+    "conditions": "Condições",
+    "elements": "Elementos",
+    "armor_class": "Classe de Armadura",
+    "equipment": "Equipamentos",
+    "languages": "Línguas"
+  },
+  "attributes": {
+    "title": "Sistema de Atributos",
+    "primary": "Atributos Primários",
+    "secondary": "Atributos Secundários",
+    "add_primary": "Adicionar Primário",
+    "add_secondary": "Adicionar Secundário",
+    "name": "Nome",
+    "mandatory": "Obrigatório",
+    "base_value": "Valor Base",
+    "min_value": "Valor Mínimo",
+    "max_value": "Valor Máximo",
+    "formula": "Fórmula"
+  },
+  "levels": {
+    "title": "Sistema de Níveis",
+    "enabled": "Sistema Ativado",
+    "disabled": "Sistema Desativado",
+    "max_level": "Nível Máximo",
+    "entity_type": "Tipo de Entidade",
+    "player": "Jogador",
+    "npc": "NPC",
+    "monster": "Monstro",
+    "scaling_type": "Tipo de Escalamento",
+    "linear": "Linear",
+    "exponential": "Exponencial",
+    "s_curve": "Curva S",
+    "manual": "Manual",
+    "base_xp": "XP Base",
+    "scaling_factor": "Fator de Escalamento",
+    "reset_xp": "Resetar XP ao Subir",
+    "reborn": "Sistema de Reborn",
+    "reborn_enabled": "Reborn Ativado",
+    "max_rebirths": "Máximo de Rebirths"
+  },
+  "races": {
+    "title": "Sistema de Raças",
+    "add_race": "Adicionar Raça",
+    "size": "Tamanho",
+    "movement_speed": "Velocidade de Movimento",
+    "abilities": "Habilidades Raciais",
+    "languages_known": "Línguas Conhecidas"
+  },
+  "proficiency": {
+    "title": "Sistema de Proficiências",
+    "add_proficiency": "Adicionar Proficiência",
+    "type": "Tipo",
+    "weapon": "Arma",
+    "armor": "Armadura",
+    "tool": "Ferramenta",
+    "skill": "Perícia",
+    "bonus": "Bônus"
+  },
+  "magic": {
+    "title": "Sistema de Magia",
+    "spell_slots": "Slots de Magia",
+    "mana_system": "Sistema de Mana",
+    "stamina_system": "Sistema de Stamina",
+    "full_caster": "Conjurador Completo",
+    "half_caster": "Meio Conjurador",
+    "mana_enabled": "Mana Ativado",
+    "base_mana": "Mana Base",
+    "mana_per_level": "Mana por Nível"
+  },
+  "talents": {
+    "title": "Sistema de Talentos",
+    "add_talent": "Adicionar Talento",
+    "weight": "Peso",
+    "small": "Pequeno (1 ponto)",
+    "medium": "Médio (2 pontos)",
+    "large": "Grande (3 pontos)",
+    "max_talents": "Máximo de Talentos",
+    "max_points": "Máximo de Pontos",
+    "combat": "Combate",
+    "discovery": "Descoberta",
+    "racial": "Racial"
+  },
+  "currency": {
+    "title": "Sistema de Moedas",
+    "add_currency": "Adicionar Moeda",
+    "abbreviation": "Abreviação",
+    "base_value": "Valor Base",
+    "weight": "Peso",
+    "exchange_rate": "Taxa de Câmbio"
+  },
+  "conditions": {
+    "title": "Sistema de Condições",
+    "add_condition": "Adicionar Condição",
+    "severity": "Severidade",
+    "minor": "Menor",
+    "moderate": "Moderada",
+    "severe": "Severa",
+    "critical": "Crítica",
+    "duration": "Duração",
+    "can_stack": "Pode Empilhar"
+  },
+  "elements": {
+    "title": "Sistema de Elementos",
+    "add_element": "Adicionar Elemento",
+    "interactions": "Interações",
+    "max_resistance_player": "Resistência Máxima (Jogador)",
+    "max_resistance_monster": "Resistência Máxima (Monstro)",
+    "allow_immunity": "Permitir Imunidade"
+  },
+  "armor_class": {
+    "title": "Sistema de Classe de Armadura",
+    "physical_ac": "AC Física",
+    "magical_ac": "AC Mágica",
+    "base_ac": "AC Base",
+    "dex_bonus": "Bônus de Destreza"
+  },
+  "equipment": {
+    "title": "Sistema de Equipamentos",
+    "add_equipment": "Adicionar Equipamento",
+    "weapon": "Arma",
+    "armor": "Armadura",
+    "consumable": "Consumível",
+    "damage": "Dano",
+    "ac_bonus": "Bônus de AC",
+    "weight": "Peso",
+    "value": "Valor",
+    "rarity": "Raridade",
+    "common": "Comum",
+    "uncommon": "Incomum",
+    "rare": "Raro",
+    "epic": "Épico",
+    "legendary": "Lendário"
+  },
+  "languages": {
+    "title": "Sistema de Línguas",
+    "add_language": "Adicionar Língua",
+    "difficulty": "Dificuldade",
+    "script": "Escrita",
+    "speakers": "Falantes",
+    "proficiency": "Proficiência",
+    "speak": "Falar",
+    "read": "Ler",
+    "write": "Escrever",
+    "understand": "Compreender"
+  },
+  "buttons": {
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Deletar",
+    "edit": "Editar",
+    "add": "Adicionar",
+    "remove": "Remover",
+    "apply": "Aplicar",
+    "close": "Fechar",
+    "back": "Voltar",
+    "next": "Próximo"
+  },
+  "messages": {
+    "save_success": "Salvo com sucesso!",
+    "load_success": "Carregado com sucesso!",
+    "delete_confirm": "Tem certeza que deseja deletar?",
+    "error": "Erro",
+    "warning": "Aviso",
+    "info": "Informação"
+  }
+}
