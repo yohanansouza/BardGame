@@ -143,6 +143,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.venv311/
 
 # Spyder project settings
 .spyderproject
@@ -184,6 +185,11 @@ cython_debug/
 *.diff
 *.orig
 *.rej
+
+# Config, batch and misc text files
+*.cfg
+*.bat
+*.txt
 
 # ===================================
 # Build and Compiled Files
