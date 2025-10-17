@@ -18,6 +18,8 @@ from config import PATHS
 
 # Plataforma
 from utils.platform import detect_platform
+from ui.screens.carousel_tabs import CarouselTabs
+from ui.screens.attributes_tab import AttributesTab
 
 
 class MainMenuScreen(Screen):
@@ -152,26 +154,13 @@ class WorldEditorScreen(Screen):
         
         layout.add_widget(top_bar)
         
-        # Área de conteúdo (TODO: adicionar abas para cada sistema)
-        content = Label(
-            text='Editor de Mundo\n\n'
-                 'Aqui você poderá configurar:\n'
-                 '- Atributos\n'
-                 '- Níveis\n'
-                 '- Raças\n'
-                 '- Proficiências\n'
-                 '- Magia\n'
-                 '- Talentos\n'
-                 '- Moedas\n'
-                 '- Condições\n'
-                 '- Elementos\n'
-                 '- Classe de Armadura\n'
-                 '- Equipamentos\n'
-                 '- Línguas',
-            size_hint=(1, 0.9)
-        )
-        layout.add_widget(content)
-        
+        # Área de conteúdo: usar CarouselTabs com abas por sistema
+        self.carousel_tabs = CarouselTabs()
+        layout.add_widget(self.carousel_tabs)
+
+        # preparar abas (será populado quando a tela for mostrada)
+        self._tabs_populated = False
+
         self.add_widget(layout)
     
     def save_world(self, instance):
@@ -188,6 +177,46 @@ class WorldEditorScreen(Screen):
     
     def back_to_menu(self, instance):
         self.manager.current = 'main_menu'
+
+    def on_pre_enter(self):
+        # Popula as abas na primeira vez que a tela for exibida
+        if not getattr(self, '_tabs_populated', False):
+            self.populate_tabs()
+            self._tabs_populated = True
+
+    def populate_tabs(self):
+        """Adiciona as abas para cada setor do sistema ao CarouselTabs.
+
+        Atualmente adiciona:
+        - Atributos (usando AttributesTab)
+        - Abas placeholder para os outros setores
+        """
+        # Tentar limpar abas existentes (se houver)
+        try:
+            # Carousel do Kivy armazena slides em .slides
+            slides = getattr(self.carousel_tabs.carousel, 'slides', None)
+            if slides:
+                for child in list(slides):
+                    try:
+                        self.carousel_tabs.carousel.remove_widget(child)
+                    except Exception:
+                        pass
+        except Exception:
+            pass
+
+        # Aba de Atributos (funcional)
+        attr_tab = AttributesTab()
+        self.carousel_tabs.add_tab(attr_tab, title='Atributos')
+
+        # Abas placeholder para outros setores
+        other_sectors = [
+            'Níveis', 'Raças', 'Proficiências', 'Magia', 'Talentos',
+            'Moedas', 'Condições', 'Elementos', 'Classe de Armadura',
+            'Equipamentos', 'Línguas'
+        ]
+
+        for name in other_sectors:
+            self.carousel_tabs.add_tab(Label(text=f'{name} - Em desenvolvimento', halign='center'))
 
 
 class BardGameApp(App):
