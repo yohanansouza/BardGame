@@ -13,13 +13,13 @@ from kivy.core.window import Window
 import json
 import os
 
-from core.world_manager import WorldManager
+from src.core.world_manager import WorldManager
 from config import PATHS
 
 # Plataforma
-from utils.platform import detect_platform
-from ui.screens.carousel_tabs import CarouselTabs
-from ui.screens.attributes_tab import AttributesTab
+from src.utils.platform import detect_platform
+from src.ui.screens.carousel_tabs import CarouselTabs
+from src.ui.screens.attributes_tab import AttributesTab
 
 
 class MainMenuScreen(Screen):

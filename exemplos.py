@@ -7,8 +7,8 @@ import sys
 # Adicionar o diretório raiz ao path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from core.world_manager import WorldManager
-from models import (
+from src.core.world_manager import WorldManager
+from src.models import (
     AttributeRule, SecondaryAttribute,
     LevelConfig, EntityType, XPScalingType,
     Race, SizeCategory, MovementRules,
