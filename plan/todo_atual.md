@@ -24,6 +24,29 @@ Este arquivo contém os TODOs que devemos estar atuando em breve. Foque em progr
 
 ---
 
+## Tarefa: Implementar tela inicial com spinner de mundos e KivyMD
+
+- Descrição:
+  - Ajustar a tela inicial do app: adicionar um spinner no topo para seleção de mundos (campanhas), e aplicar KivyMD para um design mais clean e bonito, mantendo compatibilidade multiplataforma.
+- Arquivos alterados / adicionados:
+  - `main.py` - ajustar tela inicial
+  - `ui/screens/home.py` - nova tela inicial (se aplicável)
+  - Instalar e integrar KivyMD (pip install kivymd)
+- Status:
+  - [ ] Criado
+  - [ ] Lint/Typecheck
+  - [ ] Testes manuais
+  - [ ] Correções/Pendências
+- Comandos úteis:
+  - `pip install kivymd`  # instalar KivyMD
+  - `python .\main.py`  # testar tela inicial
+- Passos para testes manuais:
+  1. Iniciar o app e verificar spinner no topo com mundos disponíveis.
+  2. Selecionar um mundo e confirmar mudança no app.
+  3. Verificar design responsivo e visual limpo com KivyMD.
+
+---
+
 ## Tarefa: Implementar aba principal (Dashboard)
 
 - Descrição:
