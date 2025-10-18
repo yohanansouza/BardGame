@@ -13,7 +13,6 @@ Este arquivo contém os escopos que iremos elaborar e preparar o terreno para ap
   - `data/maps/` (estrutura de armazenamento)
 - Status:
   - [ ] Criado
-  - [ ] Testes automáticos
   - [ ] Lint/Typecheck
   - [ ] Testes manuais
   - [ ] Correções/Pendências
@@ -29,7 +28,6 @@ Este arquivo contém os escopos que iremos elaborar e preparar o terreno para ap
   - `network/chat_protocol.py`
 - Status:
   - [ ] Criado
-  - [ ] Testes automáticos
   - [ ] Lint/Typecheck
   - [ ] Testes manuais
   - [ ] Correções/Pendências
@@ -45,7 +43,6 @@ Este arquivo contém os escopos que iremos elaborar e preparar o terreno para ap
   - `models/dice.py`
 - Status:
   - [ ] Criado
-  - [ ] Testes automáticos
   - [ ] Lint/Typecheck
   - [ ] Testes manuais
   - [ ] Correções/Pendências
@@ -61,7 +58,6 @@ Este arquivo contém os escopos que iremos elaborar e preparar o terreno para ap
   - `core/world_import.py`
 - Status:
   - [ ] Criado
-  - [ ] Testes automáticos
   - [ ] Lint/Typecheck
   - [ ] Testes manuais
   - [ ] Correções/Pendências
@@ -77,7 +73,6 @@ Este arquivo contém os escopos que iremos elaborar e preparar o terreno para ap
   - `ui/screens/marketplace.py`
 - Status:
   - [ ] Criado
-  - [ ] Testes automáticos
   - [ ] Lint/Typecheck
   - [ ] Testes manuais
   - [ ] Correções/Pendências
@@ -92,14 +87,58 @@ Este arquivo contém os escopos que iremos elaborar e preparar o terreno para ap
   - `core/plugin_system.py`
 - Status:
   - [ ] Criado
-  - [ ] Testes automáticos
   - [ ] Lint/Typecheck
   - [ ] Testes manuais
   - [ ] Correções/Pendências
 
 ---
 
-## Elaboração e Adições Futuras
+## Tarefa: Sistema de combate
+
+- Descrição:
+  - Implementar sistema de combate (turn-based ou em tempo real configurável), com cálculo de danos, iniciativas e efeitos.
+- Arquivos alterados / adicionados:
+  - `models/combat.py` - nova lógica de combate
+- Status:
+  - [ ] Criado
+  - [ ] Lint/Typecheck
+  - [ ] Testes manuais
+  - [ ] Correções/Pendências
+- Passos para testes manuais:
+  1. Criar dois personagens de teste
+  2. Iniciar combate e validar ordem de turnos e resultados
+
+---
+
+## Tarefa: Gerador de personagens
+
+- Descrição:
+  - Ferramenta para gerar personagens (NPCs e jogadores) com seleção de raças, classes, atributos e equipamentos randômicos ou predefinidos.
+- Arquivos alterados / adicionados:
+  - `ui/screens/char_generator.py`
+  - `models/character_generator.py`
+- Status:
+  - [ ] Criado
+  - [ ] Lint/Typecheck
+  - [ ] Testes manuais
+  - [ ] Correções/Pendências
+
+---
+
+## Tarefa: Sistema de inventário com drag-and-drop
+
+- Descrição:
+  - Inventário visual com suporte a arrastar-e-soltar itens, empacotamento, limite de peso/volume e UI responsiva.
+- Arquivos alterados / adicionados:
+  - `ui/screens/inventory.py`
+  - `models/inventory.py`
+- Status:
+  - [ ] Criado
+  - [ ] Lint/Typecheck
+  - [ ] Testes manuais
+  - [ ] Correções/Pendências
+
+---
 
 - Refine descrições e divida em subtarefas conforme necessário.
 - Quando um escopo estiver maduro e pronto para ação, mova para `todo_atual.md`.

@@ -14,7 +14,6 @@ Cada item TODO deve seguir o template abaixo:
   - `path/to/file.py` - breve descrição
 - **Status**:
   - [ ] Criado: Implementação básica concluída (código adicionado ao repositório).
-  - [ ] Testes automáticos: Testes unitários, de integração ou funcionais automatizados que validam a funcionalidade (ex.: pytest, unittest). Distinto de verificações estáticas.
   - [ ] Lint/Typecheck: O código passou nas verificações de lint e tipo (ex.: flake8, pylint, mypy). Foca em qualidade de código e detecção de erros estáticos.
   - [ ] Testes manuais: Passos manuais descrevendo como validar a feature em runtime (o que clicar, quais entradas usar).
   - [ ] Correções/Pendências: Caso algo funcione mas precise ajustes visuais/UX/posição, listar aqui com prioridade.

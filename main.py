@@ -21,6 +21,15 @@ from src.utils.platform import detect_platform
 from src.ui.screens.carousel_tabs import CarouselTabs
 from src.ui.screens.attributes_tab import AttributesTab
 
+# Configurar janela
+Window.fullscreen = False
+Window.borderless = False
+Window.title = "BardGame"
+Window.size = (1200, 800)
+Window.resizable = True
+Window.minimum_width = 400
+Window.minimum_height = 300
+
 
 class MainMenuScreen(Screen):
     """Tela do menu principal"""

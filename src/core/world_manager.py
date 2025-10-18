@@ -7,7 +7,7 @@ from typing import Dict, Optional
 from dataclasses import dataclass, field
 from datetime import datetime
 
-from models import (
+from ..models import (
     AttributeSystem, LevelSystem, RaceSystem, ProficiencySystem,
     MagicSystem, TalentSystem, CurrencySystem, ConditionSystem,
     ElementSystem, ACSystem, EquipmentSystem, LanguageSystem
